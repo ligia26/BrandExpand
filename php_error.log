@@ -1,0 +1,47 @@
+2024-08-29 11:16:57,338 - INFO - ====== WebDriver manager ======
+mkdir: cannot create directory ‘/var/www/.local’: Permission denied
+touch: cannot touch '/var/www/.local/share/applications/mimeapps.list': No such file or directory
+mkdir: cannot create directory ‘/var/www/.local’: Permission denied
+touch: cannot touch '/var/www/.local/share/applications/mimeapps.list': No such file or directory
+2024-08-29 11:16:57,473 - INFO - Get LATEST chromedriver version for google-chrome
+2024-08-29 11:16:57,529 - INFO - Get LATEST chromedriver version for google-chrome
+2024-08-29 11:16:57,585 - INFO - Driver [/var/www/.wdm/drivers/chromedriver/linux64/126.0.6478.182/chromedriver-linux64/chromedriver] found in cache
+Traceback (most recent call last):
+  File "/var/www/automation.datainnovation.io/html/get_real_url.py", line 104, in <module>
+    final_url = get_final_url(initial_url)
+  File "/var/www/automation.datainnovation.io/html/get_real_url.py", line 24, in get_final_url
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+  File "/usr/local/lib/python3.10/dist-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/usr/local/lib/python3.10/dist-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/usr/local/lib/python3.10/dist-packages/selenium/webdriver/remote/webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "/usr/local/lib/python3.10/dist-packages/selenium/webdriver/remote/webdriver.py", line 292, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+  File "/usr/local/lib/python3.10/dist-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/dist-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /opt/google/chrome/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+#0 0x5628fe519c5a <unknown>
+#1 0x5628fe1fce2c <unknown>
+#2 0x5628fe231d6a <unknown>
+#3 0x5628fe22e17b <unknown>
+#4 0x5628fe278c49 <unknown>
+#5 0x5628fe26c363 <unknown>
+#6 0x5628fe23c247 <unknown>
+#7 0x5628fe23cb9e <unknown>
+#8 0x5628fe4e022b <unknown>
+#9 0x5628fe4e42d1 <unknown>
+#10 0x5628fe4cbade <unknown>
+#11 0x5628fe4e4e32 <unknown>
+#12 0x5628fe4b077f <unknown>
+#13 0x5628fe509618 <unknown>
+#14 0x5628fe5097f0 <unknown>
+#15 0x5628fe518d8c <unknown>
+#16 0x7fbd92bcbac3 <unknown>
+
